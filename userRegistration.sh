@@ -43,8 +43,7 @@
 echo "Enter your password :: "
 read password
 passwordPattern="(?=.*[A-Z])|(?=.*[a-z])|(?=.*\d)\S{6,}"
-if [[ ${#password} -ge 8 && "$password" == *[A-Z]* && "$password" == *[a-z]* && "$password" == *[0-9]* && "$password" == *[@#%^*_-+]* ]]
-#if [[ $password =~ $passwordPattern ]]
+if [[ ${#password} -ge 8 && "$password" == *[A-Z]* && "$password" == *[a-z]* && "$password" == *[0-9]* && "$password" == *[@#%^]* ]]
 then
 	echo "Valid password"
 else
